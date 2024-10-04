@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+header {
+    background: #2C5F2D;
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+#logo {
+    width: 50px;
+    height: auto;
+    margin-left: 20px;
+    margin-right: 20px; 
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0; 
+    margin: 0; 
+}
+nav ul li {
+    padding: 0 10px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.content {
+    flex: 1;
+    padding-right: 2rem;
+}
+.image-container {
+    flex: 1;
+}
+.image-container img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+}
+footer {
+    background: #222;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+.social-icons a {
+    color: #fff;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+.resources ul {
+    list-style: none;
+    padding: 0;
+}
+.resources ul li {
+    margin-bottom: 0.5rem;
+}
