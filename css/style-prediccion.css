@@ -7,6 +7,47 @@ body {
     padding: 20px;
 }
 
+header {
+    background: #52b454;
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#logo {
+    width: 60px;
+    height: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 50%
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+}
+
+nav ul li {
+    padding: 0 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
 .container {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -38,7 +79,7 @@ body {
 }
 
 button {
-    background: #007bff;
+    background: #3cc23e;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -48,7 +89,7 @@ button {
 }
 
 button:hover {
-    background: #0056b3;
+    background: #278029;
 }
 
 .graph-container {
