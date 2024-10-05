@@ -2,33 +2,55 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #52b454 0%, #52b454 75px, white 400px);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 header {
     background: #52b454;
     padding: 0.5rem 0;
+    width: 100%;
+}
+
+.header-content {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
     height: 75px;
 }
 
-nav {
+.logo-container {
     display: flex;
     align-items: center;
-    width: 100%;
-    justify-content: space-between;
+    margin-left: -130px;
+}
+
+.company-name {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
 }
 
 #logo {
     width: 60px;
     height: auto;
-    margin-left: 20px;
-    margin-right: 20px;
-    border-radius: 50%
+    border-radius: 50%;
+}
+
+#results {
+    width: 80%;
+    margin: 0 auto;
+}
+
+nav {
+    margin-right: -100px;
 }
 
 nav ul {
@@ -36,7 +58,6 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    margin-left: auto;
 }
 
 nav ul li {
@@ -49,14 +70,46 @@ nav a {
 }
 
 .container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 20px;
 }
 
+.card h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.card p {
+    text-align: justify;
+}
+
 @media (max-width: 768px) {
     .container {
         grid-template-columns: 1fr;
+    }
+
+    .header-content {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 20px;
+    }
+
+    nav {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        padding: 5px 0;
     }
 }
 
@@ -78,6 +131,12 @@ nav a {
     color: #666;
 }
 
+#control-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 button {
     background: #3cc23e;
     color: #fff;
@@ -86,16 +145,42 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    transition: background 0.3s ease;
 }
 
 button:hover {
     background: #278029;
 }
 
+.hidden {
+    display: none;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
 .graph-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
+}
+
+.graph-container .card:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 300px;
 }
 
 .graph-placeholder {
@@ -106,8 +191,4 @@ button:hover {
     justify-content: center;
     font-size: 16px;
     color: #666;
-}
-
-.hidden {
-    display: none;
 }

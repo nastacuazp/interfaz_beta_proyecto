@@ -10,15 +10,16 @@
 
 <body>
     <header>
-        <img id="logo" src="../imagenes/logo.jpg" alt="Logo SideralX">
-        <div class="container">
+        <div class="header-content">
+            <div class="logo-container">
+                <img id="logo" src="../imagenes/logo.jpg" alt="Logo SideralX">
+                <span class="company-name">SideralX</span>
+            </div>
             <nav>
-                <div class="logo"></div>
                 <ul>
                     <li><a href="../index.html">Inicio</a></li>
                     <li><a href="../index.html#resumen">Resumen</a></li>
-                    <li><a href="prediccion.html">Predicción</a></li>
-                    <!-- <li><a href="#">Animación</a></li> -->
+                    <li><a href="prediccion.html">Análisis</a></li>
                 </ul>
             </nav>
         </div>
@@ -26,16 +27,21 @@
 
     <!-- <h1>Análisis de Siembra</h1> -->
 
-    <div class="container">
-        <div class="card">
-            <h2>Mapa de la Zona</h2>
-            <div class="map-placeholder">Aquí irá el mapa</div>
+    <main id="main-content">
+        <div class="container">
+            <div class="card">
+                <h2>Mapa de la Zona</h2>
+                <div class="map-placeholder">Aquí irá el mapa</div>
+            </div>
+            <div class="card">
+                <h2>Controles</h2>
+                <div id="control-buttons">
+                    <button id="analyzeBtn">Analizar el Área</button>
+                    <button id="scrollBtn" class="hidden">Ver Resultados</button>
+                </div>
+            </div>
         </div>
-        <div class="card">
-            <h2>Controles</h2>
-            <button id="analyzeBtn">Analizar el Área</button>
-        </div>
-    </div>
+    </main>
 
     <div id="results" class="hidden">
         <div class="card">
@@ -48,30 +54,23 @@
             <div class="card">
                 <h3>Calidad del Suelo</h3>
                 <div class="graph-placeholder">Gráfica de Calidad del Suelo</div>
-                <p>Esta gráfica muestra la calidad del suelo en su área. Un suelo de alta calidad es esencial para el
-                    crecimiento saludable de los cultivos. Se consideran factores como el pH, los nutrientes y la
-                    estructura del suelo.</p>
+                <p>Esta gráfica muestra la calidad del suelo en su área, considerando factores como pH, nutrientes y estructura, esenciales
+                para el crecimiento saludable de los cultivo.</p>
             </div>
             <div class="card">
                 <h3>Precipitaciones Previstas</h3>
                 <div class="graph-placeholder">Gráfica de Precipitaciones Previstas</div>
-                <p>Esta gráfica muestra las precipitaciones previstas para los próximos meses. La cantidad adecuada de
-                    lluvia es crucial para el crecimiento de los cultivos. Tenga en cuenta que estas son previsiones y
-                    pueden cambiar.</p>
+                <p>Esta gráfica muestra las precipitaciones previstas, cruciales para el crecimiento de los cultivos, aunque pueden cambiar.</p>
             </div>
             <div class="card">
                 <h3>Temperaturas Esperadas</h3>
                 <div class="graph-placeholder">Gráfica de Temperaturas Esperadas</div>
-                <p>Esta gráfica muestra las temperaturas esperadas durante la temporada de crecimiento. Las temperaturas
-                    adecuadas son importantes para el desarrollo de las plantas. Se muestran las temperaturas máximas y
-                    mínimas previstas.</p>
+                <p>Esta gráfica muestra las temperaturas máximas y mínimas previstas, importantes para el desarrollo de las plantas.</p>
             </div>
             <div class="card">
                 <h3>Rendimiento Estimado</h3>
                 <div class="graph-placeholder">Gráfica de Rendimiento Estimado</div>
-                <p>Esta gráfica muestra el rendimiento estimado de los cultivos basado en las condiciones actuales y
-                    previstas. Es una proyección que puede ayudarle a planificar su cosecha, pero recuerde que el
-                    rendimiento real puede variar.</p>
+                <p>Esta gráfica proyecta el rendimiento estimado de los cultivos, útil para planificar la cosecha, aunque puede variar.</p>
             </div>
         </div>
     </div>
