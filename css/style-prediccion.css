@@ -4,7 +4,7 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #52b454 0%, #52b454 75px, white 400px);
+    background: linear-gradient(to bottom, #52b454 0%, #52b454 75px, #ffffff 400px);
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -50,7 +50,7 @@ header {
 }
 
 nav {
-    margin-right: auto;
+    margin-left: auto;
 }
 
 nav ul {
@@ -73,17 +73,9 @@ nav a {
     max-width: 1200px;
     margin: 20px auto;
     padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-.map-card {
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.controls-card {
-    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
 }
 
 .card h3 {
@@ -113,6 +105,10 @@ nav a {
 }
 
 @media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
     .header-content {
         justify-content: space-between;
         padding: 0 20px;
@@ -136,6 +132,7 @@ nav a {
         background-color: #52b454;
         transition: 0.3s;
         padding-top: 60px;
+        margin-left: 0;
     }
 
     nav.active {
