@@ -50,7 +50,7 @@ header {
 }
 
 nav {
-    margin-right: -100px;
+    margin-right: auto;
 }
 
 nav ul {
@@ -73,9 +73,17 @@ nav a {
     max-width: 1200px;
     margin: 20px auto;
     padding: 0 20px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.map-card {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.controls-card {
+    width: 100%;
 }
 
 .card h3 {
@@ -87,20 +95,51 @@ nav a {
     text-align: justify;
 }
 
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
 @media (max-width: 768px) {
-    .container {
-        grid-template-columns: 1fr;
+    .header-content {
+        justify-content: space-between;
+        padding: 0 20px;
     }
 
-    .header-content {
-        flex-direction: column;
-        height: auto;
-        padding: 10px 20px;
+    .logo-container {
+        margin-left: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        z-index: 1000;
     }
 
     nav {
-        margin-left: 0;
-        margin-top: 10px;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: #52b454;
+        transition: 0.3s;
+        padding-top: 60px;
+    }
+
+    nav.active {
+        right: 0;
     }
 
     nav ul {
@@ -109,7 +148,19 @@ nav a {
     }
 
     nav ul li {
-        padding: 5px 0;
+        margin: 15px 0;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
     }
 }
 

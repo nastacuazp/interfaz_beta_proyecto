@@ -72,6 +72,24 @@ document.addEventListener('DOMContentLoaded', function() {
     skipLink.className = 'skip-link';
     document.body.insertBefore(skipLink, document.body.firstChild);
 
+    // Menú hamburguesa para versión móvil
+    const menuToggle = document.getElementById('menu-toggle');
+    const mainNav = document.getElementById('main-nav');
+
+    menuToggle.addEventListener('click', function() {
+        this.classList.toggle('active');
+        mainNav.classList.toggle('active');
+    });
+
+    // Cerrar el menú al hacer clic en un enlace
+    const navLinks = mainNav.getElementsByTagName('a');
+    for (let i = 0; i < navLinks.length; i++) {
+        navLinks[i].addEventListener('click', function() {
+            menuToggle.classList.remove('active');
+            mainNav.classList.remove('active');
+        });
+    }
+
     // Estilo para saltar el enlace
     const style = document.createElement('style');
     style.textContent = `
