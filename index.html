@@ -1,65 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
     <title>SideralX</title>
     <link rel="Stylesheet" href="css/style-index.css">
 </head>
 
 <body>
     <header>
-        <img id="logo" src="imagenes/logo.jpg">
         <div class="container">
+            <div class="logo-container">
+                <img id="logo" src="imagenes/logo.jpg" alt="Logo de SideralX">
+                <div class="company-name">SideralX</div>
+            </div>
             <nav>
-                <div class="logo" src="imagenes/logo.jpg">SideralX</div>
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="#resumen">Resumen</a></li>
-                    <li><a href="pages/prediccion.html">Predicción</a></li>
+                    <li><a href="index.html" id="inicio-link" data-active="false">Inicio</a></li>
+                    <li><a href="#resumen" id="inicio-link" <li><a href="pages/prediccion.html" id="inicio-link"
+                                data-active="false">Análisis</a></li>
                     <!-- <li><a href="#">Animación</a></li> -->
                 </ul>
             </nav>
         </div>
     </header>
 
+    <div class="header-image">
+        <img src="imagenes/agro.jpg" alt="Imagen debajo del header">
+        <h1 class="title-overlay"></h1>
+    </div>
+
     <div class="container">
-        <main>
+        <main id="main">
             <div class="content">
-                <h1 id="resumen">Resumen</h1>
-                <p></p>
-                <p>Excepteur efficient emerging, enim veniam quin aliqua carefully curated Ginza conversation exquisite perfect nostrud nisi intricate Contad. Qui, international first-class nulla ut. Punctual adipisicing, essential lovely queen tempor eiusmod iure. Exclusive Izakaya charming Scandinavian impeccable aute quality of life soft power pariatur Melbourne occaecat discerning. Qui wardrobe silhoutic et Porter destination Toto remarkable officia Helsinki excepteur Basset hound. Zürich sleepy perfect consectetur.</p>
+                <h1 class="title" id="resumen">AGRO-PREDIC</h1>
+                <p class="justified-text"> </p>
+                <p class="justified-text">Protegiendo tus cultivos con ciencia espacial</p>
+
+                <div class="button-container">
+                    <a href="pages/prediccion.html">
+                        <button class="prediction-button">Empezar ahora</button>
+                    </a>
+                </div>
             </div>
             <div class="image-container">
-                <a href="https://es.pngtree.com/freebackground/farm-work-in-3d-a-farmer-in-overalls-tending-to-the-land_3990314.html" target="_blank">
-                    <img src="imagenes/farmer.png" alt="Farm work 3D scene with a farmer">
-                </a>
+                <img src="imagenes/farmer.jpg" alt="Farm work 3D scene with a farmer">
             </div>
-        </main>
+    </div>
+
+
+    </main>
     </div>
 
     <footer>
         <div class="container">
-            <div class="social-icons">
-                <a href="#" aria-label="Facebook">F</a>
-                <a href="#" aria-label="Twitter">T</a>
-                <a href="#" aria-label="Instagram">I</a>
-                <a href="#" aria-label="YouTube">Y</a>
-                <a href="#" aria-label="LinkedIn">L</a>
-            </div>
-            <div class="resources">
-                <h3>Resources</h3>
-                <ul>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Best practices</a></li>
-                    <li><a href="#">Colors</a></li>
-                    <li><a href="#">Color wheel</a></li>
-                    <li><a href="#">Support</a></li>
-                    <li><a href="#">Developers</a></li>
-                    <li><a href="#">Resource library</a></li>
-                </ul>
-            </div>
+
+            </ul>
+        </div>
         </div>
     </footer>
+
+    <script src="js/index.js"></script>
 </body>
+
 </html>
